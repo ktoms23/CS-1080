@@ -12,17 +12,38 @@
             background-color: ghostwhite;
             color: #333;
         }
-        #header {
-            background-color: rgb(35, 37, 54);
-            color: white;
-            text-align: center;
+
+        #heading {
+            background-image: url('reserve-faunique-des-chic-chocs.jpg');
+            background-size: 70%;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
             padding: 20px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: ghostwhite;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
         }
-        #header a {
-            text-decoration: none;
-            color: white;
+
+        #home-link {
+            background-color: ghostwhite;
+            padding: 5px 15px;
+            border-radius: 5px;
             font-size: 18px;
+            text-decoration: underline;
+            color: rgb(35, 37, 54);
+            margin-top: 10px;
         }
+
+        #home-link:hover {
+            background-color: #fffcfc;
+        }
+
         #main-content {
             width: 80%;
             max-width: 800px;
@@ -32,22 +53,32 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         #avalanche-forecast, #weather-forecast, #packing-info {
             margin-bottom: 20px;
             padding: 15px;
             border-bottom: 2px solid #ddd;
         }
+
         h2 {
             color: rgb(35, 37, 54);
         }
+
         a {
             color: rgb(35, 37, 54);
             font-weight: bold;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
+        #av-chart {
+            width: 300px;
+            height: auto;
+        }
+
         #footer {
             text-align: center;
             background: rgb(35, 37, 54);
@@ -59,22 +90,25 @@
 </head>
 <body>
 
-    <header id="header">
-        <a href="Homepage.html">🏠 Homepage</a>
+    
+    <header id="heading">
+        <a href="Homepage.html" id="home-link">🏠 Homepage</a>
         <h1>Weather & Avalanche Safety</h1>
     </header>
 
+    
     <div id="main-content">
         <section id="avalanche-forecast">
             <h2>Avalanche Forecast</h2>
             <p>Check the latest avalanche forecast before heading out to the backcountry:</p>
-            <p><a href="https://www.avalanche.ca/" target="_blank">Avalanche Canada Forecast</a></p>
+            <p><a href="https://avalanchequebec.ca/bulletin-davalanche/" target="_blank">Avalanche Quebec Forecast</a></p>
+            <img id="av-chart" src="16c438e3-a36a-4675-a8bc-a4973d2be970_North+American+Public+Avalanche+Danger+Scale.avif" alt="Avalanche Danger Chart">
         </section>
 
         <section id="weather-forecast">
             <h2>Weather Forecast</h2>
             <p>Weather conditions can change rapidly in the mountains. Be prepared by checking the latest forecast:</p>
-            <p><a href="https://weather.gc.ca/" target="_blank">Government of Canada Weather</a></p>
+            <p><a href="https://avalanchequebec.ca/en/alpine-weather-forecast/" target="_blank">Avalanche Quebec Alpine Weather Forecast</a></p>
         </section>
 
         <section id="packing-info">
@@ -84,6 +118,7 @@
         </section>
     </div>
 
+    <!-- Footer section -->
     <footer id="footer">
         Thank you for visiting, and stay safe in the backcountry!
     </footer>
